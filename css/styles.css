@@ -1,0 +1,336 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    border: none;
+    outline: none;
+}
+
+body {
+    background-color:#eabec3;
+    font-family: 'Montserrat Alternates', sans-serif;
+} 
+
+a {
+    cursor: pointer;
+    color: #9682bd; 
+}
+
+nav {
+    background-color: white;
+    position: fixed;
+    margin-top: 0; 
+    z-index: 1;  
+}
+
+#logo{
+    float: left;
+    width: 10%;
+}
+
+#nombre {
+    margin-top: 3%;
+    width: 25%;
+}
+
+ul.menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end ;
+    font-size: 30px;
+}
+
+
+ul img {
+    width: 100%;
+    max-width: 1200px;
+    margin: 7% 7% 1%;
+}
+
+/* fotos para un slider no armado, no tocar (? */
+#foto2,
+#foto3,
+#foto4 {
+    display: none;
+}
+
+h3 {
+    text-align: center;
+    font-size: xx-large;
+    color: white;
+}
+
+h3.marcas-logos {
+    color: black;
+    padding: 5px;
+    margin: 0 15%;
+}
+
+#marcas {
+    margin: auto 10% auto; 
+}
+
+#marcas img {
+    height: 100%;
+    max-height: 100px;
+    display: inline;
+    margin: 1%;
+    margin-bottom: 5%;
+
+}
+
+/* pie de pagina */
+
+footer {
+    font-size: 18px;
+    background-color: white;
+    color: #9682bd;
+    width: 100%;
+    position: absolute;
+    margin: 0;
+    padding: 2% 5%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+section.redes h3 {
+    color: #9682bd;
+}
+
+iframe {
+    height: auto;
+    float: left;
+}
+
+
+/* bio */
+
+img.fondo-bio {
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+}
+
+
+h3.bio-nombre {
+    text-align: left;
+    position: relative;
+    padding: 20% 0% 0;
+}
+
+article.texto-bio {
+    text-align: justify;
+    font-size: x-large;
+    position: relative;
+    padding: 0% 15% 20%;
+    color: white;
+}
+
+article.texto-bio a {
+    color: white;
+    font-weight: bolder; 
+
+}
+
+#foto-bio {
+    margin: 0%;
+    float: left;
+    margin: 23% 1% 1% 15%;
+    background-color: white;
+    border: solid white 7px;
+    border-radius: 50%;
+    
+}
+
+/* contacto */
+
+img.fondo-contacto {
+        width: 100%;
+        position: absolute;
+        z-index: -1;
+}
+
+h3.contacto {
+    position: relative;
+    padding: 15% 15% 0;
+}
+
+form {
+    padding: 0 36% 10%;
+    color: white;
+}
+
+main label {
+    font-size: larger;
+}
+
+button.enviar {
+    color: black;
+    height: 30px; 
+    width: 60px;
+}
+
+h6,
+a.ejemplo-alice,
+a.vuela {
+    text-align: right;
+    color: white;
+}
+
+/* proyectos */
+
+article.portfolio {
+    padding: 10% 10% 1%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-gap: 1em;
+}
+
+article.portfolio img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    object-position: center;     
+}
+
+/* media q */
+
+@media screen and (max-width: 480px) and (orientation: portrait) {
+
+    body,
+    a,
+    ul,
+    h3,
+    article.texto-bio,
+    form label {
+        font-size: 16px;
+
+    }
+
+    ul.slider img {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    } 
+
+
+    h6, 
+    #foto-bio, 
+    img.fondo-bio,
+    img.fondo-contacto,
+    iframe, 
+    #nombre,
+    section.datos {
+        display: none;
+    }
+
+    body { 
+        display: block;
+    }
+
+    #marcas,
+    form,
+    article.porfolio img {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    input, 
+    textarea{
+        width: 150%;
+    }
+
+    textarea {
+        max-height:  150px;
+    }
+
+}
+
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    
+    body,
+    a,
+    ul,
+    h3,
+    article.texto-bio,
+    form label {
+        font-size: 18px;
+    }
+
+    ul.slider img {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    } 
+
+    #nombre,
+    h6 {
+        display: none;
+    }
+
+    #marcas,
+    form,
+    article.porfolio img {
+        display: flex;
+        flex-direction: column;
+        align-items: center;    
+    }
+
+    footer strong,
+    ul.lista-datos,
+    ul.lista-redes,
+    ul.lista-redes a {
+        font-size: 18px;
+    }
+
+
+    article.texto-bio,
+    article.portfolio {
+        padding-bottom: 7%;
+    }
+
+
+    #foto-bio {
+        width: 170px;
+    }
+
+
+    form {
+        padding: 0;
+    }
+
+    textarea {
+        max-height: 10px;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1199px) and (orientation: landscape) {
+    ul.slider img {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    } 
+
+    #marcas {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    footer strong {
+        font-size: 22px;
+    }
+
+    main.form-contacto {
+        padding-bottom: 1%;
+    }
+
+    form {
+        padding-bottom: 4%;
+    }
+
+}
